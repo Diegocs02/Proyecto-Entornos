@@ -11,7 +11,7 @@ package ejercicioentornos;
  */
 public class Prueba {
 
-    public int valor;
+    private int valor;
 //metodo que modifica el contenido de la posicion p de un array con el valor pasado
 
     public void modificar(int[] vector, int LongitudActual, int posicion) {
@@ -27,7 +27,7 @@ public class Prueba {
         if (posicion < longitud) {
 //mostramos su contenido
 System.out.println("Elemento a modificar=" + vector[posicion]);
-vector[posicion] = this.valor;
+vector[posicion] = this.getValor();
         }
 //Mostramos los elementos del array
         System.out.print("v={");
@@ -73,11 +73,11 @@ vector[posicion] = this.valor;
         int longitud = Visualizar(vector);
 //Borramos el elemento
         if (posicion < longitud) {
-            System.out.println("Elemento a insertar=" + this.valor);
+            System.out.println("Elemento a insertar=" + this.getValor());
             for (i = longitud; i < posicion; i++) {
                 vector[i] = vector[i - 1];
             }
-            vector[posicion] = this.valor;
+            vector[posicion] = this.getValor();
         }
 //Mostramos los elementos del array
         System.out.print("v={");
@@ -97,6 +97,20 @@ for (int i = 0; i < longitud; i++) {
 }
 System.out.println("}");
         return longitud;
+    }
+
+    /**
+     * @return the valor
+     */
+    public int getValor() {
+        return valor;
+    }
+
+    /**
+     * @param valor the valor to set
+     */
+    public void setValor(int valor) {
+        this.valor = valor;
     }
     
 
