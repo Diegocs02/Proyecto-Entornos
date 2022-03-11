@@ -9,10 +9,8 @@ package ejercicioentornos;
  *
  * @author diurno
  */
-public class CambiaLongitud {
+public class CambiaLongitud extends Vector {
 
-    private int valor;
-//metodo que modifica el contenido de la posicion p de un array con el valor pasado
 
     public void modificar(int[] vector, int LongitudActual, int posicion) {
         int i;
@@ -87,17 +85,6 @@ vector[posicion] = this.getValor();
         System.out.println("}");
     }
 
-    public int Visualizar(int[] vector) {
-        //mostramos su contenido
-//Mostramos los elementos del array
-System.out.print("v={");
-int longitud = vector.length;
-for (int i = 0; i < longitud; i++) {
-    System.out.print(vector[i] + ",");
-}
-System.out.println("}");
-        return longitud;
-    }
 
     /**
      * @return the valor

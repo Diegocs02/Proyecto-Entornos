@@ -9,7 +9,7 @@ package ejercicioentornos;
  *
  * @author diurno
  */
-public class NoCambiaLongitud {
+public class NoCambiaLongitud extends Vector {
 
     private int valor;
 //metodo que modifica el contenido de la posicion p de un array con el valor pasado
