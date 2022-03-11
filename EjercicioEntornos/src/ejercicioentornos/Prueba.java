@@ -71,14 +71,7 @@ vector[posicion] = this.valor;
     //elementos
     public void insertar(int[] vector, int LongitudActual) {
         int posicion = 1, i;
-//mostramos su contenido
-//Mostramos los elementos del array
-        System.out.print("v={");
-        int longitud = vector.length;
-        for (i = 0; i < longitud; i++) {
-            System.out.print(vector[i] + ",");
-        }
-        System.out.println("}");
+        int longitud = Visualizar(vector);
 //Borramos el elemento
         if (posicion < longitud) {
             System.out.println("Elemento a insertar=" + this.valor);
@@ -93,6 +86,18 @@ vector[posicion] = this.valor;
             System.out.print(vector[i] + ",");
         }
         System.out.println("}");
+    }
+
+    public int Visualizar(int[] vector) {
+        //mostramos su contenido
+//Mostramos los elementos del array
+System.out.print("v={");
+int longitud = vector.length;
+for (int i = 0; i < longitud; i++) {
+    System.out.print(vector[i] + ",");
+}
+System.out.println("}");
+        return longitud;
     }
     
 
